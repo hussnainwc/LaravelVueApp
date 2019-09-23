@@ -21,7 +21,9 @@ npm install
 
 composer install
 
-Use .env.example to come up with your own env
+Rename .env.example to .env
+
+php artisan key:generate
 
 #Database Steps
 
