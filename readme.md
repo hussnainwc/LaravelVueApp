@@ -1,31 +1,35 @@
 
-#Dependencies
+# Dependencies
 
-Install node js then test with node -v
+Install node js
 
-Install composer then test with composer -V (capital)
+test installation with `node -v`
 
-#Database if you need it
+Install composer
+
+test installation with `composer -V`
+
+# Database if you need it
 
 Install mysql server 5, or 8
 
-If you pick 8 make sure during installation you pick legacy password
+If you pick 8 make sure during installation you pick legacy password (laravel doesn't have support for version 8's password)
 
 Install mysql workbench or php myadmin whatever you like
 
-#Steps
+# Steps
 
 cd to the project directory and run
 
-npm install
+`npm install`
 
-composer install
+`composer install`
 
-Rename .env.example to .env
+`mv .env.example .env`
 
-php artisan key:generate
+`php artisan key:generate`
 
-#Database Steps
+# Database Steps
 
 Run your mysql server
 
@@ -33,18 +37,16 @@ create a new database.
 
 In .env and enter your database name your username and password at DB_USERNAME
 
-Go to the config folder and then to database.php
+In the config folder go to database.php
 
 Scroll down to the mysql part enter your database name and username and passowrd
 
-php artisan migrate (If you have connected a database and want to migrate the tables.)
+run `php artisan migrate` (If you have connected a database and want to migrate the tables.)
 
-#Run
+# Run
 
-npm run build -- to build for production
+`npm run build` -- to build for production
 
-npm run watch -- this builds everytime you change anything in the files to built
+`npm run watch` -- this builds the project everytime you change anything in the vue files. !Do not close this terminal 
 
-open a new command prompt and cd to project directory then run
-
-php artisan serve -- this will start a local development server at port 8000 (you can specify host and port of your choice if you like)
+`php artisan serve` -- this will start a local development server at port 8000 (you can specify host and port of your choice if you like)
